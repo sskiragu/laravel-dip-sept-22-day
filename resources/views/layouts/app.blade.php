@@ -40,6 +40,7 @@
     </div>
 
     @yield('content')
+    @yield('image-section')
 
     {{-- Footer --}}
 </body>
