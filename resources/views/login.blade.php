@@ -53,7 +53,7 @@
     <div class="login-form">
         <div>
         <h2>Login Here</h2> <!-- Added heading -->
-        <form action="/process_login" method="POST">
+        <form action="/login" method="POST">
             @csrf
             <div>
                 <input type="text" name="username" placeholder="Enter username">
