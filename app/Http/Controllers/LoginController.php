@@ -13,7 +13,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             return redirect('/dashboard');
         }else{
-            return redirect('/login');
+            return redirect('/login')->with('failed', 'Wrong Credetials');
         }
     }
 

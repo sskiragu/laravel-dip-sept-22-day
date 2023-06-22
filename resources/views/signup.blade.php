@@ -44,11 +44,19 @@
     .signup-form input[type="submit"]:hover {
         background-color: #45a049;
     }
+    .input-error{
+        color: red;
+    }
 </style>
 </head>
 <body>
     @extends('layouts.app')
 
+    @section('errors')
+        @if (session('error'))
+            {{session('error')}}
+        @endif
+    @endsection
     @section('content')
     <div class="signup-form">
         <div>
@@ -57,12 +65,27 @@
             @csrf
             <div>
                 <input type="text" name="username" placeholder="Enter username">
+                <span class="input-error">
+                    @error('username')
+                        {{$message}}
+                    @enderror
+                </span>
             </div>
             <div>
                 <input type="email" name="email" placeholder="Enter email">
+                <span class="input-error">
+                    @error('email')
+                        {{$message}}
+                    @enderror
+                </span>
             </div>
             <div>
                 <input type="password" name="password" placeholder="Enter password">
+                <span class="input-error">
+                    @error('password')
+                        {{$message}}
+                    @enderror
+                </span>
             </div>
             <div>
                 <input type="submit" name="signup" value="Signup">

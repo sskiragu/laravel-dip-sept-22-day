@@ -39,6 +39,8 @@
         </nav>
     </div>
 
+    @yield('errors')
+    @yield('success')
     @yield('content')
     @yield('image-section')
 
