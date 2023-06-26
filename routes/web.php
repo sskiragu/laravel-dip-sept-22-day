@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,3 +37,6 @@ Route::post('/process_signup', [UserController::class, 'store']);
 Route::post('/login', [LoginController::class, 'login'])->name('login');
 
 Route::get('/logout', [LoginController::class, 'logout']);
+
+Route::get('/dashboard/profile', [DashboardController::class, 'profile'])->name('dashboard.profile');
+Route::patch('/profile/update', [DashboardController::class, 'update_profile'])->name('profile.update');

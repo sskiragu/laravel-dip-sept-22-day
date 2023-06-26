@@ -10,15 +10,21 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: blue;
         }
-    
+        .wrapper{
+            background-color: #f4f4f4;
+        }
+        .search{
+            width: 50%;
+            margin: 0 auto;
+        }
         .container {
             display: flex;
             height: 100vh;
         }
     
         .sidebar {
-            background-color: #f4f4f4;
             width: 200px;
         }
     
@@ -55,21 +61,29 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="sidebar">
-            <nav>
-                <ul>
-                    <li><a href="">Dashboard</a></li>
-                    <li><a href="">Profile</a></li>
-                    <li><a href="">Apply Loan</a></li>
-                    <li><a href="">Reports</a></li>
-                    <li><a href="">Settings</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                </ul>
-            </nav>
+    <div class="wrapper">
+        <div class="search">
+            <form action="">
+                <input type="text" placeholder="Search">
+            </form>
         </div>
-        <div class="main-content">
-            <h1>Main content.</h1>
+        <div class="container">
+            <div class="sidebar">
+                <nav>
+                    <ul>
+                        <li><a href="">Dashboard</a></li>
+                        <li><a href="{{route('dashboard.profile')}}">Profile</a></li>
+                        <li><a href="">Apply Loan</a></li>
+                        <li><a href="">Reports</a></li>
+                        <li><a href="">Settings</a></li>
+                        <li><a href="/logout">Logout</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="main-content">
+                @yield('message')
+                @yield('dashboard-content')
+            </div>
         </div>
     </div>
 </body>
