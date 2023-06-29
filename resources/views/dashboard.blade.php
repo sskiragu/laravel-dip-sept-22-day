@@ -40,8 +40,8 @@
     
         nav ul li a {
             display: block;
-            padding: 10px;
-            color: #333;
+            padding: 5px;
+            color: #ff8c00;
             text-decoration: none;
         }
     
@@ -71,11 +71,17 @@
             <div class="sidebar">
                 <nav>
                     <ul>
-                        <li><a href="">Dashboard</a></li>
+                        <li><a href="{{route('dashboard')}}">Dashboard</a></li>
                         <li><a href="{{route('dashboard.profile')}}">Profile</a></li>
-                        <li><a href="">Apply Loan</a></li>
-                        <li><a href="">Reports</a></li>
-                        <li><a href="">Settings</a></li>
+                        <li><a href="">View accounts</a></li>
+                        <li><a href="">View transactions</a></li>
+                        <li><a href="">Transfer funds</a></li>
+                        <li><a href="{{route('dashboard.loan')}}">Loan</a></li>
+                        <li><a href="">Pay bills</a></li>
+                        <li><a href="">View statements</a></li>
+                        <li><a href="">Manage cards</a></li>
+                        <li><a href="">Manage Alerts</a></li>
+                        <li><a href="">Messaging</a></li>
                         <li><a href="/logout">Logout</a></li>
                     </ul>
                 </nav>
